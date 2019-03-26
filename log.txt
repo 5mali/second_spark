@@ -1,0 +1,53 @@
+|
+|
+A       : Vary Batch Size 
+A0      : BATCH_SIZE = 12 - (10/10) - BEST RESULTS
+A1      : BATCH_SIZE = 24 - (10/10)
+A2 = S3 : BATCH_SIZE = 32 - (10/10)
+A3      : BATCH_SIZE = 48 -  (8/10)
+A4      : BATCH_SIZE = 64 -  (8/10)
+|
+|
+********************************************************************
+S3                                                                 *
+********************************************************************
+MODEL:                                                             *
+S3 : INPUT->FC1->RELU->FC_OUT->OUTPUT                              *
+LOSS : MSE                                                         *
+                                                                   * 
+LEARNING:   INIT_WEIGHT     = FC1 : KAIMING                        *
+                              OUT : XAVIER                         *
+            WIDTH           = 50                                   *
+            DEPTH           = 1 + 1                                *
+            WEIGHT_DECAY    = NONE                                 *
+            LR              = 1e-4                                 *
+            UPDATE_FREQ     = 18 MONTHS                            *
+            MEMORY          = 36 MONTHS                            *
+            ITERATION       = 100                                  *
+            BATCH_SIZE      = 32                                   *
+            EPSILON         = EPSILON SCHEDULING-[0.762 to 0.967]  *           
+            GAMMA           = 0.9                                  *
+            LAMBDA          = 0.95                                 *
+                                                                   *
+TRAINING:   TOKYO [2000-2009]                                      *
+            SCHEDULING        = V3                                 *
+            BATTERY_RESET     = 0%                                 *
+            REWARD_FUNC       = 1d                                 *
+            REWARD_BROADCAST  = TRUE                               *
+            VIOLATION PENALTY = NONE                               *
+                                                                   *
+VALIDATION: TOKYO[2000-2018]                                       *
+            GREEDY POLICY                                          *
+********************************************************************
+|
+|
+S3 - Scheduling V3, Reward Function 1d, No violations, Update = 18 months, Iterations = 100, 1xRELU,MSE, WT_DECAY=None, Memory = 3 years  -> (10/10)
+|
+|
+Q3 - Scheduling V3, Reward Function 1d, No violations, Update = 18 months, Iterations = 100, 1xRELU,MSE, WT_DECAY=None                    -> (10/10)
+|
+|
+I1 - Scheduling V3, Reward Function 1c, Update = 18 months, Iterations = 100, 1xRELU,MSE                                                  -> 10/10 (9/10) -1 BEST SEED:4,6,1,7
+|
+|
+no_spark
