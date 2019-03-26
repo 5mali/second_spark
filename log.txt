@@ -1,3 +1,8 @@
+A2: Dueling Double DQN
+|
+A1 : Double DQN
+|
+A0: Careful Explorer. Actions are limited within a certain range of greedy action
 |
 |
 A       : Vary Batch Size 
