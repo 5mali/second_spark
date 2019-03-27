@@ -1,3 +1,5 @@
+B0: More general Reward function
+|
 A2: Dueling Double DQN
 |
 A1 : Double DQN
