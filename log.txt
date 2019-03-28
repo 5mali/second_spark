@@ -1,4 +1,4 @@
-B1: One extra layer before adv and val computations
+B1: One extra layer before adv and val computations. Does not help very much | Duty cycle maxes out at zero battery
 |
 B0: More general Reward function
 |
