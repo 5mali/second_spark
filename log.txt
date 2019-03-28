@@ -1,3 +1,5 @@
+B1: One extra layer before adv and val computations
+|
 B0: More general Reward function
 |
 A2: Dueling Double DQN
