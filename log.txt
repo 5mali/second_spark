@@ -1,3 +1,7 @@
+C0: B0 with PER
+|
+B2: Increase width to 100. Doesn't help either.
+|
 B1: One extra layer before adv and val computations. Does not help very much | Duty cycle maxes out at zero battery
 |
 B0: More general Reward function
